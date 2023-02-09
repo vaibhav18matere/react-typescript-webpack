@@ -4,10 +4,12 @@
   "description": "basic react app with typescript and webpack 5",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --config webpack/webpack.config.js --env env=dev --open",
+    "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "vaibhav matere",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.20.12",
@@ -18,13 +20,19 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
+    "react-refresh": "^0.14.0",
+    "style-loader": "^3.3.1",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }
